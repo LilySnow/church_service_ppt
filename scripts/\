@@ -1,0 +1,168 @@
+//https://stackoverflow.com/questions/65419407/add-or-remove-row-in-input-table
+let i = 1;
+function rowTemplate_LordInHolyTemple() {
+        return `<div class="form-row">
+					<div class="name">Song name</div>
+					<div class="form-column">
+						<input class="input--style-6" type="text" name="GodInTemple_title_main" value="主在聖殿中">
+					</div>
+					<div class="form-column">
+						<input class="input--style-6" type="text" name="GodInTemple_title_minor" value="The Lord is in his holy temple">
+					</div>
+
+					<div class="name">Lyrics</div>
+					<div class="form-column">
+						<textarea class="textarea--style-6" type="text" name="GodInTemple_lyrics_main">
+主在聖殿中，主在聖殿中，普天下的人，
+在主面前，都應當肅靜，
+肅靜，肅靜，應當肅靜。阿們。
+
+                        </textarea>
+					</div>
+
+					<div class="form-column">
+						<textarea class="textarea--style-6" type="text" name="GodInTemple_lyrics_minor">
+The Lord is in his holy temple, 
+The Lord is in his holy temple,
+Let all the earth keep silence,
+Let all the earth keep silence before him. 
+Keep silence, keep silence before him. Amen.
+
+                        </textarea>
+					</div>
+				</div> `
+}
+
+
+function rowTemplate_song(i) {
+        return `<div class="form-row">
+					<div class="name">Song name</div>
+					<div class="form-column">
+						<input class="input--style-6" type="text" name="song-${i}_title_main">
+					</div>
+					<div class="form-column">
+						<input class="input--style-6" type="text" name="song-${i}_title_minor">
+					</div>
+
+					<div class="name">Lyrics</div>
+					<div class="form-column">
+						<textarea class="textarea--style-6" type="text" name="song-${i}_lyrics_main"></textarea>
+					</div>
+					<div class="form-column">
+						<textarea class="textarea--style-6" type="text" name="song-${i}_lyrics_minor"></textarea>
+					</div>
+				</div> `
+
+}
+
+function rowTemplate_proclaim() {
+        return `<div class="form-row">
+					<div class="name">Proclaim Verse Number</div>
+					<div class="form-column">
+						<input class="input--style-6" type="text" name="proclaim_verse_num_cn"placeholder="诗篇1:1">
+
+					</div>
+					<div class="form-column">
+						<input class="input--style-6" type="text" name="proclaim_verse_num_en">
+					</div>
+
+					<div class="name">Verse</div>
+					<div class="form-column">
+						<textarea class="textarea--style-6" type="text" name="proclaim_verse_main"></textarea>
+					</div>
+					<div class="form-column">
+						<textarea class="textarea--style-6" type="text" name="proclaim_verse_minor"></textarea>
+					</div>
+				</div> `
+
+}
+
+function rowTemplate_BibleReading() {
+    //https://css-tricks.com/auto-growing-inputs-textareas/
+    //https://codepen.io/anon/embed/bGNJJBE/c72208b279d750f1ab46b6a45bbd04d7?default-tab=result&height=350&slug-hash=c72208b279d750f1ab46b6a45bbd04d7&theme-id=1
+        return `<div class="form-row">
+					<div class="name">Bible Verse Number</div>
+					<div class="form-column">
+						<input class="input--style-6" type="text" name="bible_verse_num_cn" placeholder="诗篇1:1">
+					</div>
+					<div class="form-column">
+						<input class="input--style-6" type="text" name="bible_verse_num_en" placeholder="Psalm1:1">
+					</div>
+
+					<div class="name">Verse</div>
+					<div class="form-column">
+						<textarea class="textarea--style-6" type="text" name="bible_verse_main"></textarea>
+					</div>
+					<div class="form-column">
+						<textarea class="textarea--style-6" type="text" name="bible_verse_minor"></textarea>
+					</div>
+				</div> `
+
+}
+function rowTemplate_gebed(){
+        return `<div class="form-row">
+					<div class="name">Gebed</div>
+                </div>`
+}
+
+function addRow_LordInHolyTemple() {
+  $(".card-body").append(rowTemplate_LordInHolyTemple(i));
+  alert("Hello! I am an alert box!!");
+}
+
+function addRow_claim() {
+  $(".card-body").append(rowTemplate_proclaim());
+}
+function addRow_gebed(){
+  $(".card-body").append(rowTemplate_gebed());
+}
+function addRow_song() {
+  $(".card-body").append(rowTemplate_song(i));
+  i++;
+}
+function addRow_BibleReading(){
+  $(".card-body").append(rowTemplate_BibleReading(i));
+}
+
+
+$('#list').change(function() {
+    //if ($(this).val() == "Song") {
+        // Do something for option "Song"
+        // alert("Hello! I am an alert box!!");
+    // }
+
+    switch ($(this).val()) {
+        case "Lord_in_holy_temple":
+            console.log('lord in his holy temple')
+            addRow_LordInHolyTemple();
+            break;
+        case "Song":
+            addRow_song();
+            alert("Xue ~ I am an alert box!!");
+            break;
+        case "Proclaim":
+            addRow_claim();
+            break;
+        case "Prayer":
+            addRow_gebed();
+            break;
+        case "BibleReading":
+            addRow_BibleReading();
+            break;
+         default:
+            alert("Please choose!")
+            break;
+    }
+    
+});
+
+$(document).ready(function(){
+  $("#Delete_row").click(function(){
+    $("p").hide();
+    alert("Hello! I am an alert box!!");
+    console.log('hide p');
+  });
+});
+
+
+

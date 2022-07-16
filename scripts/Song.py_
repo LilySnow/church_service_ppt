@@ -1,0 +1,36 @@
+class Song:
+  def __init__(self, title_main, title_minor, main, minor):
+    self.title_main = title_main
+    self.title_minor = title_minor
+    self.main = main.split('\n')
+    self.minor = minor.split('\n')
+  def mkdw_gen(self):
+      i = 0
+      n_main = len(self.main)
+
+      for i in range(0,n_main, 2):
+          if i+1 < n_main:
+            page = f'''
+                # {self.title_main}
+                ## {self.title_minor}
+
+                ## {self.main[i]}
+                ## {self.main[i+1]}
+
+                ## {self.minor[i]}
+                ## {self.minor[i+1]}
+                '''
+else:
+            page = f'''
+            # {self.title_main}
+            ## {self.title_minor}
+
+            ## {self.main[i]}
+
+            ## {self.minor[i]}
+            '''
+        print(page)
+
+
+
+
