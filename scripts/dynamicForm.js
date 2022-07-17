@@ -13,7 +13,7 @@ function rowTemplate_add_del(){
                     <div class="name"></div>
 
                     <div class="form-column">
-                    <select class="list" name="list" id="list">
+                    <select class="list" >
                     <option value="choose">Add</option>
                     <option value="Lord_in_holy_temple">Lord in His Holy Temple</option>
                     <option value="Song" onclick="addRow() " >Song</option>
@@ -63,7 +63,7 @@ function rowTemplate_LordInHolyTemple() {
                         </textarea>
 					</div>
 
-					<div class="form-column">
+					    <div class="form-column">
 						<textarea class="textarea--style-6" type="text" name="GodInTemple_lyrics_minor">
 The Lord is in his holy temple, 
 The Lord is in his holy temple,
@@ -72,8 +72,8 @@ Let all the earth keep silence before him.
 Keep silence, keep silence before him. Amen.
 
                         </textarea>
-					</div>
-				</div>
+					    </div>
+				     </div>
         </div>`
 }
 
@@ -338,13 +338,22 @@ $(".card-body").on("click", ".ibtnDel", function (event) {
 
 });
 
-// Select from the drop-down list
-$('#list').change(function() {
+$('.list').change(function(){
+    console.log("xue1");
+  var data= $(this).val();
+  //$(this).parents().css({"color": "red", "border": "2px solid red"});
+  alert(data);            
+});
 
+
+// Select from the drop-down list
+$(".card-body").on("change", ".list", function (event) {
+    var data = $(this).val();
+    alert(data);
     switch ($(this).val()) {
         case "Lord_in_holy_temple":
             // add a row in the html for Lord In The Holy Temple
-            //$(this).css({"color": "red", "border": "2px solid red"});
+            $(this).parent().css({"color": "red", "border": "2px solid red"});
             newRow = rowTemplate_LordInHolyTemple();
             $(this).closest(".form-block").after(newRow);
             break;
@@ -402,13 +411,13 @@ $('#list').change(function() {
 });
 
 
-$(document).ready(function(){
-  $("#Delete_row").click(function(){
-    $("p").hide();
-    alert("Hello! I am an alert box!!");
-    console.log('hide p');
-  });
-});
+//$(document).ready(function(){
+//  $("#Delete_row").click(function(){
+//    $("p").hide();
+//    alert("Hello! I am an alert box!!");
+//    console.log('hide p');
+//  });
+//});
 
 
 
