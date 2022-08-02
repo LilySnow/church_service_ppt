@@ -29,31 +29,83 @@
                 <div class="card-body">
                     <form action="http://127.0.0.1:8080/process_post" method="POST" enctype="multipart/form-data">
 
+
+                    <div class="form-block">
+                        <div class="name" ></div>
+                        <div class="form-row">
+                            <div class="name"></div>
+                            <div class="form-column">
+
+                    <select class="list" >
+                    <option value="choose">Add</option>
+                    <option value="Lord_in_holy_temple">Lord in His Holy Temple</option>
+                    <option value="Song" onclick="addRow() " >Song</option>
+                    <option value="Proclaim">Proclaim</option>
+                    <option value="Gebed" >Gebed</option>
+                    <option value="Voorbede" >Voorbede</option>
+                    <option value="BibleReading">BibleReading</option>
+                    <option value="Preach">Preach</option>
+                    <option value="Avondmaal">Avondmaal</option>
+                    <option value="Baptism">Baptism</option>
+                    <option value="BibleVerseThisWeek">Bible verse of the week</option>
+                    <option value="Welcome">Welcome Song</option>
+                    <option value="Report">Report</option>
+                    <option value="Collection">Collection</option>
+                    <option value="Creed">Creed</option>
+                    <option value="Doxology">Doxology</option>
+                    <option value="Onze_Vader">主禱文</option>
+                    <option value="GodBlessSong">May God Bless You Song</option>
+                    <option value="Zegen">Zegen</option>
+                    <option value="Final_slide">Final_slide</option>
+                    <option value="PDF">PDF</option>
+                    </select>
+
+
+
+                            </div>
+
+                            <div class="form-column">
+                            </div>
+                        </div>
+                </div>
+
+
                     <div class="form-block">
 
                         <div class="name" value="Song"></div>
                         <div class="form-row">
                             <div class="name"></div>
                             <div class="form-column">
-                            <select name="list" id="list">
-							<option value="choose">Choose</option>
-							<option value="Lord_in_holy_temple">Lord in His Holy Temple</option>
-							<option value="Song" onclick="addRow() " >Song</option>
-							<option value="Proclaim">Proclaim</option>
-							<option value="Prayer" >Prayer</option>
-							<option value="BibleReading">BibleReading</option>
-							<option value="PDF">PDF/preach</option>
-							<option value="BibleVerseThisWeek">Bible verse of the week</option>
-							<option value="Welcome">Welcome Song</option>
-							<option value="Report">Report</option>
-							<option value="Collection">Collection</option>
-							<option value="Creed">Creed</option>
-							<option value="GodBlessSong">May God Bless You Song</option>
-							</select>
+
+                    <select class="list" >
+                    <option value="choose">Add</option>
+                    <option value="Lord_in_holy_temple">Lord in His Holy Temple</option>
+                    <option value="Song" onclick="addRow() " >Song</option>
+                    <option value="Proclaim">Proclaim</option>
+                    <option value="Gebed" >Gebed</option>
+                    <option value="Voorbede" >Voorbede</option>
+                    <option value="BibleReading">BibleReading</option>
+                    <option value="Preach">Preach</option>
+                    <option value="Avondmaal">Avondmaal</option>
+                    <option value="Baptism">Baptism</option>
+                    <option value="BibleVerseThisWeek">Bible verse of the week</option>
+                    <option value="Welcome">Welcome Song</option>
+                    <option value="Report">Report</option>
+                    <option value="Collection">Collection</option>
+                    <option value="Creed">Creed</option>
+                    <option value="Doxology">Doxology</option>
+                    <option value="Onze_Vader">主禱文</option>
+                    <option value="GodBlessSong">May God Bless You Song</option>
+                    <option value="Zegen">Zegen</option>
+                    <option value="Final_slide">Final_slide</option>
+                    <option value="PDF">PDF</option>
+                    </select>
+
 
                             </div>
+
                             <div class="form-column">
-                            <button  value="Delete" id='Delete'>Delete</button>
+                            <input type="button" class="ibtnDel" value="Delete">
                             </div>
                         </div>
 
@@ -93,38 +145,7 @@ Keep silence, keep silence before him. Amen.
                     </div>
 
 
-                    <div class="form-block">
-                        <div class="name" value="Proclaim"></div>
-                            <div class="form-row">
-                                <div class="name">Proclaim</div>
-                                <div class="form-column">
-                                    <input class="input--style-6" type="text" name="proclaim_verse_num_cn" placeholder="诗篇1:1">
-                                </div>
-                                <div class="form-column">
-                                    <input class="input--style-6" type="text" name="proclaim_verse_num_en" placeholder="Psalm1:1">
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="name">Verse</div>
-                                <div class="form-column">
-                                    <textarea class="textarea--style-6" type="text" name="proclaim_verse_main"></textarea>
-                                </div>
-                                <div class="form-column">
-                                    <textarea class="textarea--style-6" type="text" name="proclaim_verse_minor"></textarea>
-                                </div>
-                            </div>
-                        </div>
 				    </div>
-<!--                        <div class="form-row">
-                            <div class="name">Email address</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="email" name="email" placeholder="example@email.com">
-                                </div>
-                            </div>
-                            </div>
--->
 
 
                     </form>
