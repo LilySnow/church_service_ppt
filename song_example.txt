@@ -1,0 +1,59 @@
+title_main = '祂是阳光的主宰'
+title_minor = 'He’s the Lord of the sunshine'
+main = '''祂是陽光的主宰，
+是雨水的主。
+祂是歡樂的主宰，
+是痛苦的主。
+祂是高山的主宰，
+是海洋的主。
+祂是音樂的主宰，
+是小孩的救主。
+是我和你的主。
+He’s the Lord of the sunshine,
+the Lord of the rain.
+He’s the Lord of the good times,
+the Lord of the pain.
+He’s the Lord of the mountains,
+the Lord of the Seas.
+He’s the Lord of the music,
+the Lord of the children.
+The Lord of you and me.
+祂是陽光的主宰，
+是雨水的主。
+祂是歡樂的主宰，
+是痛苦的主。
+祂是高山的主宰，
+是海洋的主。
+祂是音樂的主宰，
+是小孩的救助。
+是我和你的主。
+'''
+minor = '''He’s the Lord of the sunshine,
+the Lord of the rain.
+He’s the Lord of the good times,
+the Lord of the pain.
+He’s the Lord of the mountains,
+the Lord of the Seas.
+He’s the Lord of the music,
+the Lord of the children.
+The Lord of you and me.
+祂是陽光的主宰，
+是雨水的主。
+祂是歡樂的主宰，
+是痛苦的主。
+祂是高山的主宰，
+是海洋的主。
+祂是音樂的主宰，
+是小孩的救助。
+是我和你的主
+He’s the Lord of the sunshine,
+the Lord of the rain.
+He’s the Lord of the good times,
+the Lord of the pain.
+He’s the Lord of the mountains,
+the Lord of the Seas.
+He’s the Lord of the music,
+the Lord of the children.
+The Lord of you and me.
+'''
+

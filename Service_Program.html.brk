@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Service Program</title>
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w960">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">Service Program</h2>
+                </div>
+                <div class="card-body">
+                    <form action="http://127.0.0.1:8080/process_post" method="POST" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <select name="list" id="list">
+							<option value="choose">Choose</option>
+							<option value="Lord_in_holy_temple">Lord in His Holy Temple</option>
+							<option value="Song" onclick="addRow() " >Song</option>
+							<option value="Proclaim">Proclaim</option>
+							<option value="Prayer" >Prayer</option>
+							<option value="BibleReading">BibleReading</option>
+							<option value="PDF">PDF/preach</option>
+							<option value="BibleVerseThisWeek">Bible verse of the week</option>
+							<option value="Welcome">Welcome Song</option>
+							<option value="Report">Report</option>
+							<option value="Collection">Collection</option>
+							<option value="Creed">Creed</option>
+							<option value="GodBlessSong">May God Bless You Song</option>
+							</select>
+
+                            <button  value="Delete_row" id='Delete_row'>Delete Row</button>
+                            <p> xue</p>
+
+                        </div>
+
+                        <div class="form-row">
+
+                        <div class="name">Song name</div>
+                        <div class="form-column">
+                            <input class="input--style-6" type="text" name="GodInTemple_title_main" value="主在聖殿中">
+                        </div>
+                        <div class="form-column">
+                            <input class="input--style-6" type="text" name="GodInTemple_title_minor" value="The Lord is in his holy temple">
+                        </div>
+
+                        <div class="name">Lyrics</div>
+                        <div class="form-column">
+                            <textarea class="textarea--style-6" type="text" name="GodInTemple_lyrics_main">
+主在聖殿中，主在聖殿中，普天下的人，
+在主面前，都應當肅靜，
+肅靜，肅靜，應當肅靜。阿們。
+
+                            </textarea>
+                        </div>
+
+                        <div class="form-column">
+                            <textarea class="textarea--style-6" type="text" name="GodInTemple_lyrics_minor">
+The Lord is in his holy temple,
+The Lord is in his holy temple,
+Let all the earth keep silence,
+Let all the earth keep silence before him.
+Keep silence, keep silence before him. Amen.
+
+                            </textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="name">Proclaim</div>
+                        <div class="form-column">
+                            <input class="input--style-6" type="text" name="proclaim_verse_num_cn" placeholder="诗篇1:1">
+                        </div>
+                        <div class="form-column">
+                            <input class="input--style-6" type="text" name="proclaim_verse_num_en" placeholder="Psalm1:1">
+                        </div>
+
+                        <div class="name">Verse</div>
+                        <div class="form-column">
+                            <textarea class="textarea--style-6" type="text" name="proclaim_verse_main"></textarea>
+                        </div>
+                        <div class="form-column">
+                            <textarea class="textarea--style-6" type="text" name="proclaim_verse_minor"></textarea>
+                        </div>
+				    </div>
+<!--                        <div class="form-row">
+                            <div class="name">Email address</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="email" name="email" placeholder="example@email.com">
+                                </div>
+                            </div>
+                            </div>
+-->
+
+
+                    </form>
+                </div>
+				<div class="card-footer">
+					<button class="btn btn--radius-2 btn--blue-2" id='submit-button'>Send</button>
+				</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+    <!-- my JS for dynamic form -->
+    <script src="scripts/dynamicForm.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

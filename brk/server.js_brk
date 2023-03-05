@@ -1,0 +1,47 @@
+// Li Xue
+// 17-Jul-2021 19:01
+
+var express = require('express');
+var path = require('path')
+var multer  = require('multer');
+var app = express();
+var bodyParser = require('body-parser');
+ 
+// create application/x-www-form-urlencoded encode 
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+app.use(multer({ dest: '/tmp/'}).array('file_preach'));
+ 
+app.use(express.static(path.join(__dirname, 'public')));
+ 
+app.get('/index.html', function (req, res) {
+   res.sendFile( __dirname + "/" + "index.html" );
+})
+ 
+app.post('/process_post', urlencodedParser, function (req, res) {
+ 
+   // output in JSON 
+   console.log(req.files[0])
+   var response = {
+       "song_title_main":req.body.song_title_main,
+       "song_title_minor":req.body.song_title_minor,
+       "lyrics_main":req.body.lyrics_main,
+       "lyrics_minor":req.body.lyrics_minor,
+       "preach_slides":req.body.file_preach
+   };
+   console.log(response.preach_slides);
+   res.end(JSON.stringify(response.preach_slides));
+   const spawn = require("child_process").spawn;
+   //const pythonProcess = spawn('python',["py/autoP.py", response.song_title_main, response.song_title_minor, response.lyrics_main, response.lyrics_minor]);
+   //const pythonProcess = spawn('python', ["py/convertSlides.py", ])
+})
+ 
+
+var server = app.listen(8080,"127.0.0.1", function () {
+ 
+  var host = server.address().address
+  var port = server.address().port
+ 
+  console.log("Visit address: http://%s:%s/index.html", host, port)
+ 
+})
+

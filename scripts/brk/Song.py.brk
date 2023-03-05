@@ -1,0 +1,27 @@
+minor_fontSize = '5'
+class Song:
+  def __init__(self, title_main, title_minor, main, minor):
+    self.title_main = title_main
+    self.title_minor = title_minor
+    self.main = main.split('\n')
+    self.minor = minor.split('\n')
+  def mkdw_gen(self):
+    i = 0
+    n_main = len(self.main)
+
+    for i in range(0,n_main, 2):
+
+        print(f"## {self.title_main}")
+        print(f'<font size="6">_{self.title_minor}_ </font>')
+        print(f"<br></br>")
+
+        print(f"### {self.main[i]}")
+        if i+1 < n_main:
+            print(f"### {self.main[i+1]}")
+
+        print(f"#### {self.minor[i]}")
+        if i+1 < n_main:
+            print(f"#### {self.minor[i+1]}")
+        print('---')
+
+
