@@ -6,7 +6,8 @@ import string
 import re
 import pdb
 all_letters = string.ascii_letters
-periods = '，。；！'
+# define patterns for Chinese and English punctuations
+periods = '\u3000-\u303f\uff00-\uff0f\uff1a-\uff20\uff3b-\uff40\uff5b-\uff65\u0021-\u002f\u003a-\u0040\u005b-\u0060\u007b-\u007e'
 
 def rm_period(sentence):
     # remove Chinese Biao Dian
