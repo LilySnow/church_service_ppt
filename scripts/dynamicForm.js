@@ -313,7 +313,6 @@ function rowTemplate_song(i) {
     // 2. Titles
     // 3. Lyrics
 
-    var i = 1;
     var song_title_main = "祂是阳光的主宰";
     var song_title_minor = "He's the Lord of the sunshine";
     var lyrics_main = `祂是陽光的主宰
